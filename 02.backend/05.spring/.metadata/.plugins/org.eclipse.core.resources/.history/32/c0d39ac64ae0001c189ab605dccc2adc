@@ -1,0 +1,102 @@
+package dev.sample.controller;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import dev.sample.model.Exhibit;
+
+// index.jsp에서 보낸 요청을 처음으로 받는 컨트롤러(Servlet)
+
+//@Controller // @Component의 직관적인 네이밍
+//@Controller가 유효한 범위는 ex1~ex3
+@RestController //
+public class MuseumController {
+	
+	
+	@DeleteMapping(value = "/{id}")
+	public void delete(@PathVariable Long id) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("step01");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		
+		tx.begin();
+		Exhibit exhibit = em.find(Exhibit.class, id);
+		em.remove(exhibit);
+		tx.commit();
+	}
+	
+	@PatchMapping(value = "/{id}")
+	public void update(@PathVariable Long id, @RequestParam("Name")  String Name) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("step01");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		
+		tx.begin();
+//		Exhibit exhibitname = new Exhibit(Name);
+		Exhibit exhibit = em.find(Exhibit.class,id);
+		exhibit.setName(Name);
+		
+		tx.commit();
+		
+	}
+	
+	@GetMapping()
+	public void read(@PathVariable Long id) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("step01");
+		EntityManager em = emf.createEntityManager();
+		
+		
+	}
+	
+	
+	//4. JSON 객체 반환 방식
+	@RequestMapping("/add4")
+	public Exhibit Booksave(@RequestParam("Name") String Name, @RequestParam("State") String State, @RequestParam("Era") String Era, @RequestParam("Floor") String Floor) {
+
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("step01");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		//DB 쿼리 코드 Book 엔티티 반환
+		
+		tx.begin();
+		Exhibit exhibit = new Exhibit();
+		exhibit.setName(Name);
+		exhibit.setState(State);
+		exhibit.setEra(Era);
+		exhibit.setFloor(Floor);
+		
+		em.persist(exhibit);
+		
+		tx.commit();
+		
+		return exhibit;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

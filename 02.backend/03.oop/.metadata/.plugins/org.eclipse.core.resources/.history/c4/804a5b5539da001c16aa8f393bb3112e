@@ -1,0 +1,5 @@
+package dev.bank.domain;
+
+public class BankTransaction {
+
+}

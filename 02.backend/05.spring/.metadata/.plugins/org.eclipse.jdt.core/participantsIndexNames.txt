@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\Bigdata\02.backend\05.spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2012960823.index
+\museum\src\main\java
+C:\Bigdata\02.backend\05.spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4284795636.index
+\Museum\src\main\resources
+C:\Bigdata\02.backend\05.spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1110567031.index
+\step01\src\main\resources
+C:\Bigdata\02.backend\05.spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3766026742.index
+\step2\src\main\java
+C:\Bigdata\02.backend\05.spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2344358172.index
+\museum\src\main\java

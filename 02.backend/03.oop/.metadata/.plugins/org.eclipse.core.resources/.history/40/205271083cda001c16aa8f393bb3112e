@@ -1,0 +1,24 @@
+package dev.bank.data;
+
+import java.nio.file.Files;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+
+public class BankStatementTSVParser {
+	private static final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+	
+	// 한 줄만 파싱, 이 클래스 내에서만 사용할 예정
+	private String parseFromTSV(final String line) {
+		final String[] columns = line.split("\t");
+		
+		final LocalDate date = LocalDate.parse(columns[0],DATE_PATTERN);
+		final int cost = Integer.parseInt(columns[1]);
+		final String name = columns[2];
+
+	}
+	
+	// 한 줄씩 파싱 후, 리스트에 추가
+	// BankTransaction -> model 클래스
+	접근제어자 List<BankTransaction> parseLinesFromTSV(List<String> lines) {}
+}

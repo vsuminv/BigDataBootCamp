@@ -1,0 +1,13 @@
+package dev.sample.model;
+
+import javax.persistence.Table;
+
+/*
+ * Entity annotation : '객체와 테이블을 맵핑(mapping)'
+ * 해당 class(Book)를 JPA가 관리하는 Entity로 인식하게 함
+ * 별도의 Table annoatation(@Table)을 지정하지 않으면 해당 클래스의 이름(Book)으로 테이블이 생성됨
+ */
+@Table 
+public class Book {
+
+}

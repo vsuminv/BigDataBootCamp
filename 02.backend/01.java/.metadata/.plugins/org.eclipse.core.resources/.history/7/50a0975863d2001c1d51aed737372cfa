@@ -1,0 +1,12 @@
+package com.builder;
+
+public class MouseTest {
+	public static void main(String[] args) {
+		Mouse jerry = new Mouse("제리", "미국", "갈색", 2, 0);
+		
+		Mouse jay = new Mouse();
+		System.out.println(jay);
+		
+	}
+
+}

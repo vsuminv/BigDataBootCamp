@@ -1,0 +1,7 @@
+package dev.sample.model;
+
+public class Major {
+	private Long id;
+	private String majorName;
+	private Major major;
+}

@@ -1,0 +1,44 @@
+package com.book_rental.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.book_rental.model.Book;
+import com.book_rental.utils.DBUtils;//		com.book_rental.utils.DBUtils
+
+public class BookDAO {
+	private Book book;
+	private Connection connection;
+	private Statement statement;
+	private ResultSet resultSet;
+	private PreparedStatement preparedStatement;
+	
+	public int update(Book book) {
+		String updateQuery = "update book_list set book_id = ? where rank = 200";
+		int update = 0;
+		
+		try(Connection connection = DBUtils.getConnection();
+				 PreparedStatement preparedStatement = createPreparedStatement(connection, updateQuery, book);)
+		{
+
+			
+			update = preparedStatement.executeUpdate();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return update;
+	}
+	private PreparedStatement createPreparedStatement(Connection connection, String sql, Book book) throws SQLException {
+		preparedStatement = connection.prepareStatement(sql);
+		preparedStatement.setInt(1, book.getBook_id()); // 1은 물음표 순서임 물음표가 여러개이면 순서맞춰 작성. 실제 쿼리 전에 작성
+//		preparedStatement.setInt(2,book.getRank()); // 1은 물음표 순서임 물음표가 여러개이면 순서맞춰 작성. 실제 쿼리 전에 작성
+		
+		return preparedStatement;
+	}
+	
+
+}

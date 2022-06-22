@@ -1,0 +1,70 @@
+package step3;
+
+import static org.junit.Assert.fail;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.junit.Test;
+
+import dev.sample.model.Major;
+import dev.sample.model.Student;
+
+public class AppTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testSave() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("step03");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		
+		/*
+		 * 1. 학과 데이터 생성(컴퓨터 공학과), 저장
+		 * 
+		 * 2. 학생 데이터 생성(학생1, 학생2) 및 컴퓨터 공학과와 연관 관계를 설정 후 저장
+		 */
+		
+		tx.begin();
+		Major major1 = new Major("컴퓨터 공학과");
+		em.persist(major1);
+		
+		//2-1. 학생1 생성, 저장
+		Student student1 = new Student("Lee");
+		student1.setMajor(major1); 
+		em.persist(student1);// 연관관계 설정
+		
+		//2-2. 학생2 생성, 저장
+		Student student2 = new Student("Kang");
+		student2.setMajor(major1); // 연관관계 설정
+		em.persist(student2);
+		
+		
+		tx.commit();
+	}
+	
+	@Test
+	public void readStudents() {//JPA로 학생 리스트 조회
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("step03");
+		EntityManager em = emf.createEntityManager();
+		
+		Major major = em.find(Major.class, 1L);
+//		System.out.println(major);
+//		System.out.println(major.getStudents());
+		
+		List<Student> students = major.getStudents();
+		for(Student student : students) {
+			System.out.println(student.getStudentName());
+		}
+		
+	}
+
+}

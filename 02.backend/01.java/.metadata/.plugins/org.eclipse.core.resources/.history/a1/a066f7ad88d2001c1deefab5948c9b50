@@ -1,0 +1,17 @@
+package com.builder;
+
+public class Mouse {
+	private String name;
+	private String address;
+	private String color;
+	private int age;
+	private int height;
+	
+	
+}
+
+	
+	
+	
+	
+

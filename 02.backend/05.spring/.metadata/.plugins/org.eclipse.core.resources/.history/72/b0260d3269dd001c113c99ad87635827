@@ -1,0 +1,5 @@
+package dev.sample.book;
+
+public class Book {
+
+}

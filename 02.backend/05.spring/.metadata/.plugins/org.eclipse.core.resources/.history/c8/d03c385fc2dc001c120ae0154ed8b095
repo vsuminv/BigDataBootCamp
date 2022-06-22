@@ -1,0 +1,19 @@
+package dev.bank;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import dev.bank.data.BankStatementCSVParser;
+import dev.bank.data.BankStatementPaser;
+
+@Configuration
+@ComponentScan //각각의 클래스들을 컴포넌트라고 부름. 클래스를 찾는 역할
+public class BankStatementFactory {
+
+	@Bean
+	public BankStatementAnalyzer bankStatementAnalyzer(BankStatementCSVParser csvParser) {
+		return new BankStatementAnalyzer(csvParser);
+	}
+
+}

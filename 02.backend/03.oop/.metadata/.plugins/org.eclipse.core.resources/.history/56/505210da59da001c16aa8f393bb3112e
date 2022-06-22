@@ -1,0 +1,24 @@
+package dev.bank.service;
+
+import java.time.Month;
+import java.util.List;
+
+import dev.bank.domain.BankTransaction;
+
+//입출금 관련 도메인(비지니스)로직을 처리하는 클래스
+public class BanckStatementProcessor {
+	
+	//1. 총 입출금 내역 계산 로직
+	public double calculateTotalAmount() {
+		return 0d;
+	}
+	
+	//2. 월 별 입출금 내역 계산 로직
+	public List<BankTransaction> calculateListMonth(Month month){
+		
+		return null;
+	}
+	
+	//3. 카테고리 별로 입출금 내역 조회 계산 로직
+	public double calculateTotalF
+ }

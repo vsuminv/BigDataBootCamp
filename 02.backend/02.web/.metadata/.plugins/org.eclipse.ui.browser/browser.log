@@ -1,0 +1,19 @@
+
+5월 22, 2022 24:40:50.51 NEW SESSION
+5월 22, 2022 24:40:50.51 [9728:2672:0522/004050.511:ERROR:device_event_log_impl.cc(214)] [00:40:50.512] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 22, 2022 24:40:50.51 [9728:2672:0522/004050.512:ERROR:device_event_log_impl.cc(214)] [00:40:50.513] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 22, 2022 24:41:17.00 [9728:8180:0522/004117.006:ERROR:os_crypt_win.cc(93)] Failed to decrypt: 키를 지정된 상태에서 사용하기에 부적합합니다. (0x8009000B)
+5월 22, 2022 24:41:17.05 [9728:8180:0522/004117.051:ERROR:os_crypt_win.cc(93)] Failed to decrypt: 키를 지정된 상태에서 사용하기에 부적합합니다. (0x8009000B)
+5월 22, 2022 24:41:46.95 [9728:14288:0522/004146.955:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 22, 2022 24:52:18.46 [17896:3552:0522/005218.469:ERROR:device_event_log_impl.cc(214)] [00:52:18.469] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 22, 2022 24:52:18.47 [17896:3552:0522/005218.469:ERROR:device_event_log_impl.cc(214)] [00:52:18.470] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 22, 2022 24:52:45.09 [17896:17276:0522/005245.091:ERROR:os_crypt_win.cc(93)] Failed to decrypt: 키를 지정된 상태에서 사용하기에 부적합합니다. (0x8009000B)
+5월 22, 2022 24:52:45.13 [17896:17276:0522/005245.132:ERROR:os_crypt_win.cc(93)] Failed to decrypt: 키를 지정된 상태에서 사용하기에 부적합합니다. (0x8009000B)
+5월 22, 2022 24:53:15.04 [17896:7752:0522/005315.040:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 22, 2022 01:51:20.48 [17896:8744:0522/015120.484:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 22, 2022 01:52:25.63 [17896:8744:0522/015225.630:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 22, 2022 01:52:55.03 [17896:8744:0522/015255.036:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 22, 2022 01:53:41.70 [17896:8744:0522/015341.707:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 22, 2022 01:55:03.83 [17896:8744:0522/015503.836:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 22, 2022 01:58:23.82 [17896:8744:0522/015823.828:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 22, 2022 02:05:21.33 [17896:8744:0522/020521.334:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105

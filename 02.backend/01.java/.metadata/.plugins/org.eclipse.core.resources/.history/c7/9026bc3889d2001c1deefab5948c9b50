@@ -1,0 +1,11 @@
+package com.builder;
+
+public class MouseTest {
+	public static void main(String[] args) {
+		
+		//jerry의 주소,키를 모를 때
+		Mouse jerry = new Mouse("제리",null,"갈색",2,0);
+		
+		
+	}
+}

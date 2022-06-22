@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Bigdata\02.backend\05.spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+961930566.index
+923940227.index
+1780162729.index
+114969761.index
+2354197020.index
+778845301.index
+3945215191.index

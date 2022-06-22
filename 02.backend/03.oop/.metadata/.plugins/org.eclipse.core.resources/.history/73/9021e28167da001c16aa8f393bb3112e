@@ -1,0 +1,7 @@
+package dev.bank.data;
+
+public interface BankStatementPaser {
+	BankTransaction parseFrom(String line);
+	List<BankTransaction> parseLinesFrom(List<String> lines);
+
+}

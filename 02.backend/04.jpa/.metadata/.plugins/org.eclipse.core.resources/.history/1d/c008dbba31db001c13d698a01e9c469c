@@ -1,0 +1,31 @@
+package dev.sample.model;
+
+public class Major {
+	private Long id;
+	private String majorName;
+	
+	public Major(Long id, String majorName) {
+		super();
+		this.id = id;
+		this.majorName = majorName;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getMajorName() {
+		return majorName;
+	}
+
+	public void setMajorName(String majorName) {
+		this.majorName = majorName;
+	}
+	
+	
+	
+}

@@ -1,0 +1,32 @@
+package com.book_rental.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.book_rental.model.Book;
+import com.book_rental.uitls.DBUtils;
+
+public class BookDAO {
+	private Book todo;
+	private Connection connection;
+	private Statement statement;
+	private ResultSet resultSet;
+	private PreparedStatement preparedStatement;
+	
+	public int update(Book book) {
+		int update = 0;
+		
+		try(
+				connection = DBUtils.getConnection();
+				
+				statement = connection.createStatement();
+				// 실제 Query 전달 및 수행(진행시켜)
+				resultSet = statement.executeQuery(selectQuery);){
+			
+		}
+	}
+	
+
+}

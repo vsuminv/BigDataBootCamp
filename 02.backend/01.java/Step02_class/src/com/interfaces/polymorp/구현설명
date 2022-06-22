@@ -1,0 +1,26 @@
+음식을 꺠물어 먹을 수 있는 Bitable 인터페이스
+추상 메서드 void bite(String food)
+
+//Bitable 인터페이스의 구현 클래스인 날카로운 이빨 클래스 SharpTeeth
+-> System.out.println("나는 육식 상어" + food + "우걱우걱");
+
+//Bitable 인터페이스의 구현 클래스인 뭉툭한 이빨 클래스 BluntTeeth
+-> System.out.println("나는 채식 상어" + food + "냠냠");
+
+상어가 이빨을 갈아끼울 수 있게 하려면?
+//상어가 이빨을 갈아끼울 수 있도록 해주는 TeethShop 클래스
+
+//food로 전달받은 음식이 "채식"이면 BluntTeeth를 반환, "채식"이 아니면 SharpTeeth를 반환하는 메서드
+Bitable getTeeth(String food) {...}
+
+
+//App.java로 테스트 
+Bitable shark = TeethShop.getTeeth("채식");
+
+
+//뭉툭한 이빨이면 채식 종류의 음식을 섭취할 수 있음
+shark.bite("토마토"); //난 채식 상어 토마토 냠냠
+
+//날카로운 이빨이면 육식 종류의 음식을 섭취할 수 있음
+shark = TeethShop.getTeeth("육식")ㅣ
+shark.bite("안심스테이크"); 나는 육식 상어 안심스케이크 우걱우걱

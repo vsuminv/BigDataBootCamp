@@ -1,0 +1,7 @@
+
+5월 30, 2022 11:17:57.76 NEW SESSION
+5월 30, 2022 11:17:57.76 [21712:22640:0530/111757.760:ERROR:device_event_log_impl.cc(214)] [11:17:57.760] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 30, 2022 11:17:57.76 [21712:22640:0530/111757.760:ERROR:device_event_log_impl.cc(214)] [11:17:57.760] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 30, 2022 11:18:24.07 [21712:14976:0530/111824.074:ERROR:os_crypt_win.cc(93)] Failed to decrypt: 키를 지정된 상태에서 사용하기에 부적합합니다. (0x8009000B)
+5월 30, 2022 11:18:24.13 [21712:14976:0530/111824.134:ERROR:os_crypt_win.cc(93)] Failed to decrypt: 키를 지정된 상태에서 사용하기에 부적합합니다. (0x8009000B)
+5월 30, 2022 11:18:54.07 [21712:12504:0530/111854.076:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

@@ -1,0 +1,26 @@
+package com.builder;
+
+public class MouseTest {
+	public static void main(String[] args) {
+//		Mouse jerry = new Mouse("제리", "미국", "갈색", 2, 0);
+//		
+//		// 점층적 생성자 패턴
+//		Mouse jay = new Mouse();
+//		System.out.println(jay);
+//
+//		//이름만 알고 있을 떄
+//		Mouse jamie = new Mouse("제이미");
+//		System.out.println(jamie);
+//		
+//		//이름과 주소를 알고 있을 때
+//		Mouse jayz = new Mouse("제이지","5");
+//		System.out.println(jayz);
+//		
+//		//setter를 활용한 패턴 (자바 빈 패턴)
+		
+		//빌더 패턴
+		new Mouse.Builder("제리").address("하와이");
+		
+	}
+
+}

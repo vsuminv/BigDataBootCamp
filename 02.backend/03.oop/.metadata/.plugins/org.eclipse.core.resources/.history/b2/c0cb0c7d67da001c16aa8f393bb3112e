@@ -1,0 +1,5 @@
+package dev.bank.data;
+
+public interface BankStatementPaser {
+
+}

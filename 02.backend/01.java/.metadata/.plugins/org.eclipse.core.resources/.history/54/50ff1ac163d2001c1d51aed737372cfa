@@ -1,0 +1,16 @@
+package com.builder;
+
+public class MouseTest {
+	public static void main(String[] args) {
+		Mouse jerry = new Mouse("제리", "미국", "갈색", 2, 0);
+		
+		// 점층적 생성자 패턴
+		Mouse jay = new Mouse();
+		System.out.println(jay);
+
+		//이름만 알고 있을 떄
+		Mouse jamie = new Mouse("제이미");
+		System.out.println(jamie);
+	}
+
+}

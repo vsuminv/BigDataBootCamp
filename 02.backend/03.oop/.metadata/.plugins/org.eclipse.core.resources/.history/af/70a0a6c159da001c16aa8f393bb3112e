@@ -1,0 +1,5 @@
+package dev.bank.service;
+
+public class BanckStatementProcessor {
+
+}

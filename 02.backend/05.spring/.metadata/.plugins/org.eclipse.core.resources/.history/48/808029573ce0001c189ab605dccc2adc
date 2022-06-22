@@ -1,0 +1,93 @@
+package dev.sample.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Exhibit {
+
+	
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID", nullable = false)
+	private Long id;
+	
+	@Column(name = "NAME", nullable = false)
+	private String name;
+	
+	@Column(name = "State", nullable = false)
+	private String state;
+	
+	@Column(name = "Era", nullable = false)
+	private String era;
+	
+	@Column(name = "Floor", nullable = false)
+	private String floor;
+	
+	
+	
+	
+
+	public Exhibit(String name) {
+		// TODO Auto-generated constructor stub
+		this.name=name;
+	}
+
+	public Exhibit() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(Exhibit exhibitname) {
+		this.name = exhibitname;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getEra() {
+		return era;
+	}
+
+	public void setEra(String era) {
+		this.era = era;
+	}
+
+	public String getFloor() {
+		return floor;
+	}
+
+	public void setFloor(String floor) {
+		this.floor = floor;
+	}
+
+	@Override
+	public String toString() {
+		return "Exhibit [id=" + id + ", name=" + name + ", state=" + state + ", era=" + era + ", floor=" + floor + "]";
+	}
+	
+	
+		
+}
+
+

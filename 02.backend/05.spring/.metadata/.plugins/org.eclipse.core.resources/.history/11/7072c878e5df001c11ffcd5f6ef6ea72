@@ -1,0 +1,36 @@
+package dev.sample.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
+
+@Entity
+
+public class Book {
+	String name;
+	String author;
+	
+	public Book() {}
+	
+	@Id
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Book [author=" + author + ", name=" + name + "]";
+	} 
+	
+	
+}

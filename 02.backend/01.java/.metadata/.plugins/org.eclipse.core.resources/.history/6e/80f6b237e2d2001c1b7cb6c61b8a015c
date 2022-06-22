@@ -1,0 +1,16 @@
+package com.book_rental.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class BookDAO {
+	private Book todo;
+	private Connection connection;
+	private Statement statement;
+	private ResultSet resultSet;
+	private PreparedStatement preparedStatement;
+	
+
+}
