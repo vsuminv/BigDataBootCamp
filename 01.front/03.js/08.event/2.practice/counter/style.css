@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Pen+Script&display=swap');
+html, body{
+    margin: 0;
+    font-family: 'Dongle';
+}
+main{
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    height: 60vh; /* viewport height : vh */
+}
+.container{
+    text-align: center;
+}
+.container h2, p {
+    font-size: 3rem;
+}
+p {
+    color: lightgrey;
+}
+
+.btn{
+    border: 2px dashed black;
+    font-family: inherit; /*부모 속성 전달받음*/
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background: transparent;
+    padding: 0.5rem, 0.75rem;
+}

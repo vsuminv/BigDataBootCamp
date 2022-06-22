@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab03_arrow.html</title>
+</head>
+<body>
+    <script>
+        // let arrow = function(){
+        //     console.log('arrow function');
+        // }
+        // arrow();
+
+        let arrow = () =>  {console.log('arrow function');}
+        arrow();
+
+        //직접해보기: sum, minus에 대한 연산 결과 반환하는 화살표 함수 만들기
+        let sum = (a, b) => { return a + b}
+        let sum1 = (a, b) => a + b // 위에 코드랑 의미 똑같음
+        console.log(sum(1,2));
+        console.log(sum1(1,2)); // 이렇게 써도 됨
+        
+
+        let minus = (a, b) => { return a  -  b}
+        console.log(minus(1,2));
+
+        // 즉시 실행 함수
+            
+        (function immediatelyFunc(){
+            alert('welcome');
+        }());
+
+        // 익명함수도 즉시 실행 함수로 가능
+        (function (){
+            alert('welcome');
+        }()); 
+        
+        // let data = 'welcome' // 즉시실행함수라 이 부분 넘기기 때문에 실행 안 됨
+        // (function immediatelyFunc1(data){
+        //     alert(data);
+        // }()); // welcome 안 나오고 unifiend라는 창 나옴. 즉시 실행 함수라 위에 선언없이 실행됨
+        
+        // 수정1
+        let data = 'welcome';
+        (function immediatelyFunc2(data){
+            alert(data);
+        }(data));
+        //수정 2
+        (function immediatelyFunc3(data){
+            alert(data);
+        })(data); // 밖으로 뺴서 사용도 가능
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Pen+Script&display=swap');
+/* h2{
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
+} */
+/* reset.css : 기본 css 스타일 초기화 */
+html, body{
+    margin: 0;
+    font-family: 'Dongle';
+   /* background-color: rgb(150,54,123); 자바스크립트가 동적으로 바꿔줌 css를 자바스크립트가 제어*/
+    /* color : aqua  html에 직접 정한 색으로 덮여서 적용됨*/
+}
+/* style.css */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* viewport height : vh */
+}
+.container{
+    text-align: center;
+}
+
+.container h2{
+    color: white;
+    background-color: #000;
+    padding: 1rem; /**rem em */
+}
+.btn{
+    border: 2px dashed black;
+    font-family: inherit; /*부모 속성 전달받음*/
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background: transparent;
+    /*상하는 0.5rem, 좌우 0.75rem*/
+    padding: 0.5rem, 0.75rem;
+}

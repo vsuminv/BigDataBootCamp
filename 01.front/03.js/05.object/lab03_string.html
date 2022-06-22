@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab03_string.html</title>
+</head>
+<body>
+    <script>
+        // String
+        let str1 = 'abcdefg';
+        
+        //charAt : 해당 인덱스의 문자열을 반환
+        console.log(str1.charAt(2));
+        console.log(str1.indexOf(2)); //str1에 2가 없기 떄문에 -1출력
+        console.log(str1[0]); //시퀀스 객체(데이타가 나열되는 특성을 가진 객체)
+        
+        // substring
+        // let str1 = 'abcdefg';
+        console.log(str1.substring(3,5)); //de로 출력
+
+        // replace
+        //  let str1 = 'abcdefg';
+        console.log(str1.replace('bcd',"BCD"));
+        console.log(str1.replace('bCd',"BCD"));
+        
+
+        //split
+        let str2 = 'HTML, CSS, JS, PYTHON, JAVA, SQL, HADOOP';
+        console.log(str2.charAt(3));
+
+        console.log(str2.split(',')); //콤마로 분리 
+        console.log(str2.split(',')[4]); // 특정요소만 출력
+
+        // concat 
+        let str3 = '노는게';
+        let str4 = '제일좋아';
+        console.log(str3.concat(str4));
+        // console.log(str3 + str4) 이렇게도 위랑 똑같이 출력
+
+        console.log("-------------")
+        // 명시적 형변환
+        console.log(typeof(String(1))); //string
+        console.log(String(1)); //1
+        console.log(String(true)); //true
+        console.log(String(NaN)); // NaN
+        console.log((1).toString()); // 1
+        console.log(typeof((1).toString())); //string
+    </script>
+    
+</body>
+</html>

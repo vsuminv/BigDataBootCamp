@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>    
+
+    <script type="text/babel">
+        const {useState} = React;
+      
+        const LoginControl = props => {
+            const [logcheck, setLogcheck] = useState(false);
+
+
+            const inbtnclick = props => {
+                if(true) {
+                    return setLogcheck(!logcheck)
+                }
+            }            
+            
+            const outbtnclick = props =>{
+                if(false){
+                    return setLogcheck(!logcheck)
+                }
+            }
+            // {logcheck ? <Login logcheck ={inbtnclick}/> : <Logout logcheck = {outbtnclick}/>}
+            // {logcheck ? <Login logcheck ={inbtnclick}/> : <Logout logcheck = {outbtnclick}/>}
+            
+            
+            return (
+                <>
+                    <Greeting logcheck = {logcheck} />
+                    <Login logcheck ={inbtnclick} />
+                    <Logout logcheck1 ={outbtnclick} />
+                    
+                </>
+            );
+                   
+        }
+
+    const User = props => <h1> 하이</h1>
+    const Guest = props => <h1> 로그인하세요</h1>
+    const Login = props => <button onClick = {props.logcheck}> 로그인 </button>
+    const Logout = props => <button onClick = {props.logcheck1} > 로그아웃 </button>
+    const Greeting = props => props.logcheck ? < User /> : <Guest />
+
+    ReactDOM.render(<LoginControl />,document.getElementById('root'));
+        
+        
+    </script>
+</body>
+</html>

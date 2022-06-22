@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab02_script.html</title>
+    <!-- HTML 내부 : head -->
+    <!--위에서부터 아래로 실행되는데 script가 먼저 실행되는 부분에서 id를 나중에 찾기 떄문에 실행이 안됨-->
+    <script>
+           document.getElementById('head').innerHTML = 'Hello, head';
+    </script>
+    <!-- HTML 외부에서 사용-->
+    <script src="/01.basic/lab02.js"></script>
+</head>
+<body>
+    <div id = "head"> head </div>
+    <div id = "body"> body </div>
+    <div id = "footer"> footer </div>
+     <!-- HTML 내부 : body -->
+    <script>
+        document.getElementById('body').innerHTML = 'Hello, body';
+    </script>
+    <!--HTML 외부에서 가져오가-->
+    <!-- <script src="lab02.js"></script> -->
+    </div>
+</body>
+</html>

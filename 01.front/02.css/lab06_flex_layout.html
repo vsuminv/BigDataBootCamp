@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        header{
+            display: flex;
+            justify-content: center;
+            background-color: gray;
+            color: white;
+        }
+     
+        nav{
+            display: flex;
+            flex-direction: row;
+        }
+        /* nav ul{
+            display: flex; 
+            list-style-type: none;
+            padding: 0;
+            background-color: gainsboro;
+        }
+ 
+        /*nav 수직으로 정렬 nav ul이랑 똑같음*/
+        /* nav ul li{  
+            float: left;
+        }  */
+        nav, article{
+            display: flex;
+            flex-direction: row;
+            background-color: red;
+        }
+        article{
+            width: 70%;
+            /* display: flex;
+            flex-direction: column;
+            background-color: yellow;
+         
+           
+        } 
+    </style>
+</head>
+<body>
+ <!-- 헤더 -->
+ <header>
+    <h1>header</h1>
+</header>
+<!-- 섹션 -->
+<section>
+    <!-- 내비 -->
+    <nav>
+        <ul>
+            <li><a href = "">nav 1</a></li>
+            <li><a href = "">nav 2</a></li>
+            <li><a href = "">nav 3</a></li>
+            
+        </ul>
+    </nav>
+    <!-- 아티클 -->
+    <article>
+        <h2>article</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam omnis rerum minima sit commodi placeat culpa est atque nam maxime. Sequi tenetur pariatur nemo fuga, harum nulla molestiae labore quasi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam omnis rerum minima sit commodi placeat culpa est atque nam maxime. Sequi tenetur pariatur nemo fuga, harum nulla molestiae labore quasi.</p>
+    </article>
+</section>
+<!-- 푸터 -->
+<footer>
+    <p>footer: Bigdata10th</p>
+</footer>
+</body>
+</html>

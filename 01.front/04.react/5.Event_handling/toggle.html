@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id ="root"></div>
+    <script type="text/babel">
+    const {useState} = React;
+
+    const Toggle = props => {
+        const [button ,setButton] = useState('off');
+
+        const clickHandler = () =>{
+            
+            // 삼항연산자
+            // button =='off' ?  setButton('on') : setButton('off')
+
+            // 조건문
+            if (button =='off'){
+                return  setButton('on')
+            }
+            else{
+                return setButton('off')
+            }       
+            
+            
+        }
+        return(
+            <div>
+                <img src= {(button == 'on') ? "pic_bulbon.gif" : "pic_bulboff.gif" } />
+                <button onClick = {clickHandler}> {button}</button>
+            </div>
+        );
+    }
+    
+    ReactDOM.render(<Toggle />, document.getElementById('root'));
+
+
+    // 강사님 코드
+    //     const {useState} = React;
+    //     const Toggle = (props) =>{
+    //     const [isToggleOn, setIsToggleOn] = useState(false);
+
+    //     const clickHandler = () => {
+    //         setIsToggleOn(!isToggleOn)
+    //     };
+    //     return <button onClick = {clickHandler}>{isToggleOn ? 'OFF' : 'ON'}</button>
+    // };
+    // ReactDOM.render(<Toggle />, document.getElementById('root'))
+    </script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab04_number.html</title>
+</head>
+<body>
+    <script>
+        // 숫자 : 명시적 형변환
+        let strNum = '10'; 
+        console.log(typeof(Number(strNum)));
+        
+        let strNum2 = 'ten';//숫자로 변경할 수 있는 다른 문자가 들어가면 NaN출력됨 
+        console.log(Number(strNum2));
+        
+        // valueof()
+        let objNum = new Number(10); // new~로 만들면 객체타입
+        console.log(objNum);
+        console.log(typeof(objNum));
+
+        console.log(objNum.valueOf());
+        console.log(typeof(objNum.valueOf()));
+        
+
+
+
+        // let str1 = 'abcd';
+        // console.log(typeof(str1.toString())); //string
+
+        // let str2 = new Number('abcd');
+        // console.log(typeof(str2));//object
+
+
+        //parse
+        //parseInt() : 정수
+        console.log(typeof(parseInt(1.23))); //1
+        console.log(parseInt(1.53)); //1
+        
+        // parseFloat() : 실수
+        console.log(parseFloat(1.1));
+        console.log(typeof(parseFloat(1)));//1
+
+        // tofixed() : 지정한 소수점 자리만큼 표시. 반올림포함 
+        let float1 = 123.456789;
+        console.log(float1.toFixed(2)); // 123.46
+        
+
+    </script>
+    
+
+</body>
+</html>

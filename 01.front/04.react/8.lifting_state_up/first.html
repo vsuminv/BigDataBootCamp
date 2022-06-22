@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>    
+
+    <script type="text/babel">
+        const {useState} = React;
+        // 온도를 입력할 수 있는 input 엘리먼트를 보유, 그 값을 temperatur라고 하는 state에 저장하는 컴포넌트
+        const Calculator = props =>{
+            const[state, setState] = useState({temperature : ''});//객체를 초기값으로 설정. 객체가 가진 프로퍼티 중 temperature라는 이름으로 비어있는 문자열을 초기값으로 함
+            const temperature = state.temperature;
+
+            const changeHandler = (event) => {
+                 // input text를 입력하면 그 때 호출되는 함수의 인값으로  event 객체를 전달 받을 수 있음 바로 쓸 수 있음 => evnet.target.value
+                console.log(event.target.value);
+                // console.log("dsfd",temperature)
+                setState({temperature : event.target.value});
+            }
+            return(
+                <fieldset>
+                    <legend>섭씨 온도를 입력하세요 : </legend>
+                    <input type = "text" onChange={changeHandler}/>
+                    
+                    <BoilingVerdict  celsius = {temperature} />
+                </fieldset>
+            );
+        }
+        // 입력한 값이 끓는점 온도인지 여부에 따라 출력문을 분기하는 컴포넌트
+        const BoilingVerdict = props =>{
+            // celsius : 섭씨온도
+            const celsius = props.celsius;
+
+            return celsius >= 100 ? <p>물이 끓는점입니다.</p>:  <p>물이 끓는점이 아닙다.</p>
+        }
+        ReactDOM.render(<Calculator />,document.getElementById('root'));
+    </script>
+</body>
+</html>

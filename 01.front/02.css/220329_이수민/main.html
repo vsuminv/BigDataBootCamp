@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            display: inline-block;
+            background-color: yellow;
+        }
+
+        .topmenu{
+            float: right;
+            flex-direction: row;
+        }
+        .top {
+            display: flex;
+        }
+            
+        .search{
+            display: flex;
+            justify-content: flex-end;
+            
+        }
+
+        
+        .myblog, .Nblog, .logout{
+            margin-right: 10px;
+
+        }
+        .category{
+            margin-top: 30px;
+            margin-left: 10px;
+            background-color: beige;
+            width: 150px;
+        }
+        .c-title{
+            font-weight: bold;
+        }
+        .vlog,.study_1, .study_2, .study_3{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .vlog:hover{
+            background-color: pink;
+        }
+        .study_1:hover{
+            background-color: skyblue;
+        }
+        .study_2:hover{
+            background-color: lightgoldenrodyellow;
+        }
+        .study_3:hover{
+            background-color:lightgreen
+        }
+        .board{
+            height: 800px;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <h1>수민's vlog</h1>
+    <div class = "topmenu">
+        <div class="top">
+            <div class = "myblog"><a href = "main.html">내 블로그</a></div>
+            <div class = "Nblog">이웃 블로그</div>
+            <div class = "logout">로그아웃</div>    
+        </div>    
+        <div class="search">
+            <form action="https://www.google.com/search?q" target="_blanck">
+                <input type="text" placeholder="검색어를 입력하세요">
+                <button>검색</button>
+            </form>
+        </div>
+    </div>
+
+    
+  
+    <div class = "board">
+        <div class = "category">
+            <div class = "c-title">category</div><br><br>
+            <div class = "vlog"><a href = "daily.html">나의 일상</a></div>
+            <div class="study_1"><a href = "HTML.html">HTML</a></div>
+            <div class = "study_2"><a href = "CSS.html">CSS</a></div>
+            <div class = "study_3"><a href = "javascript.html">JAVASCRIPT</a></div> 
+        </div>
+        <div class = "boardmain">
+            
+        </div>
+        
+
+    </div>
+       
+    
+    
+    
+</body>
+</html>

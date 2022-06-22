@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab06_layout.html</title>
+    <style>
+        *{ /*모든 것에 적용*/
+            box-sizing: border-box;
+        }
+        /*header  */
+        header{
+            background-color: gray;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+        h1{
+            margin: 0;
+        }
+        /* nav */
+        nav{
+            float: left;
+            width: 30%;
+            height:300px;
+            background-color: gainsboro;
+            padding: 20px;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        /* article */
+        article{
+            height: 300px;
+            float : left; /*right left 상관없음 너비가 꽉차있기떄문에*/
+            /* width: 70%; */
+            padding: 20px;
+            background-color: lightslategray;
+        }
+        section::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        footer{
+            background-color: gray;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        @media screen and (max-width:800px){
+            nav{
+                width: 100%;
+            };
+            article{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <h1>header</h1>
+    </header>
+    <!-- 섹션 -->
+    <section>
+        <!-- 내비 -->
+        <nav>
+            <ul>
+                <li><a href = "">nav 1</a></li>
+                <li><a href = "">nav 2</a></li>
+                <li><a href = "">nav 3</a></li>
+                
+            </ul>
+        </nav>
+        <!-- 아티클 -->
+        <article>
+            <h2>article</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam omnis rerum minima sit commodi placeat culpa est atque nam maxime. Sequi tenetur pariatur nemo fuga, harum nulla molestiae labore quasi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam omnis rerum minima sit commodi placeat culpa est atque nam maxime. Sequi tenetur pariatur nemo fuga, harum nulla molestiae labore quasi.</p>
+      
+        </article>
+    </section>
+    <!-- 푸터 -->
+    <footer>
+        <p>footer: Bigdata10th</p>
+    </footer>
+</body>
+</html>

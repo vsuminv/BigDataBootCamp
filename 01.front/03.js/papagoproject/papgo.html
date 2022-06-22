@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papago</title>
+    <link rel="stylesheet" href = "papago.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug==" crossorigin="anonymous" />
+
+
+</head>
+<body>
+    <article>
+        <header>
+            <div class="Heaer">
+                <div class="Header_main">
+                    <h1 class = "Header_main_logo">
+                        <img src="data:image/png;base64,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">
+                    </h1>
+                    <ul class="Header_main_maue">
+                        <li>웹사이트 번역</li>
+                        <li>GYM</li>
+                        <li>사전</li>
+                    </ul>
+                    <div class="Header__sub">
+                        <div class="Header__sub__icons">
+                            <i class="far fa-window-restore fa-lg"></i>
+                            
+                            
+                            
+                            <div class="Header__sub__icon"></div>
+                            <div class="Header__sub__icon"></div>
+                        </div>
+                        
+                        <div class="Header__sub__profile">
+                            <div class="Header__sub__profile__imege"></div>
+                            <div class="Header__sub__profile__username"afsf></div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+         </header>      
+         
+        </article>        
+        <section>
+            <div class="Section">
+                <div class = "Section_main">
+                    <div class="Section_left">
+                        <div class="Section_main_left_header">
+                            <div class ="select_main"> 
+
+                                <select name="language" class="left_select" >
+                                    <option value="자동감지">자동감지</option>
+                                    <option value="한국">한국어</option>
+                                    <option value="중국어">중국어</option>
+                                    <option value="일본">일본어</option>
+                                </select>
+                            </div>
+                            <div class="text_main">
+
+                                <textarea id="Section_input_left"></textarea>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="Section_right">
+                        <div class="Section_main_right_header">
+                            <div class ="select_main"> 
+
+                                <select name="language" class="right_select" >
+                                    <option value="자동감지">자동감지</option>
+                                    <option value="한국">한국어</option>
+                                    <option value="중국어">중국어</option>
+                                    <option value="일본">일본어</option>
+                                </select>
+                            </div>
+
+
+                            <div class="text_main">
+
+                                <textarea id="Section_input_left"></textarea>
+                            </div>
+                            
+
+                        
+                        </div>
+                        
+                    </div>
+            </div>
+        </section>
+        
+</body>
+</html>

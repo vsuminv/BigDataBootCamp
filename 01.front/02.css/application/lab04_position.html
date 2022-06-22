@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab04_position.html</title>
+    <style>
+        .static-parent{
+            position: relative;
+            width: 120px;
+            height: 120px;
+            background-color: gray;
+            border: 1px solid gray;
+        }
+        .static-box{
+            width: 120px;
+            height: 120px;
+            background-color: navy;
+            position: static;
+            color: red;
+            display: flex;
+            flex-direction: row;
+        }
+        .relative-box{
+            z-index: 2;
+            /* top: 60px;
+            left: 60px; */
+            width: 120px;
+            height: 120px;
+            position: relative;
+            background-color: green;
+            color: red; 
+        }
+        .absolute-box{
+            z-index: 1;
+            width: 120px;
+            height: 120px;
+            top: 60px;
+            left:60px;
+            background-color: navy;
+            position: absolute;
+            color: red;
+        }
+        .fixed-box{
+            position: fixed;
+            background-color: black;
+            color: white;
+            height: 100%;
+            /* height: 60px; */
+            bottom: 0;
+            left : 0;
+          
+        }
+        .overflow{
+            width: 150px;
+            height: 150px;
+            border-style: dashed;
+            padding: 15px;
+            margin: 15px;
+            float: left;
+        }
+        .visible{
+            overflow: visible;
+        }
+        .hidden{
+            overflow: hidden;
+        }
+        .scroll{
+            overflow: scroll;
+        }
+        .auto{
+            overflow: auto;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="static-parent">
+        <!-- <div class="static-box"> static</div> -->
+        <!-- <div class="relative-box">realtive</div>
+        <div class="absolute-box">absolute</div>  -->
+        <!-- <div class="fixed-box">footer</div>-->
+    </div>
+
+    <!-- overflow -->
+    <div class="overflow visible">
+        <h3></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eveniet vel harum rerum autem suscipit ab eum inventore sequi. Ab, maxime? In, enim architecto. Id iusto cum fuga cumque sed.
+    </div>
+    <div class="overflow hidden">
+        <h3></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eveniet vel harum rerum autem suscipit ab eum inventore sequi. Ab, maxime? In, enim architecto. Id iusto cum fuga cumque sed.
+    </div>
+    <div class="overflow scroll">
+        <h3></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eveniet vel harum rerum autem suscipit ab eum inventore sequi. Ab, maxime? In, enim architecto. Id iusto cum fuga cumque sed.
+    </div>
+    <div class="overflow auto">
+        <h3></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eveniet vel harum rerum autem suscipit ab eum inventore sequi. Ab, maxime? In, enim architecto. Id iusto cum fuga cumque sed.
+    </div>
+</body>
+</html>

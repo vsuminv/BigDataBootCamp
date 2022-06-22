@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab01_syntex.html</title>
+</head>
+<body>
+    <script>
+        // 함수를 사용하는 이유 : 재사용성이 좋다. 간결
+        // 함수 선언 : 정의
+        function add(x, y){
+            console.log(x + y);
+        }
+        //함수 호출 : 사용
+        add(1,2);
+        
+        let url = "naver.com";
+        add('http://',url);
+
+    
+        function print(){
+            console.log('매개변수가 없는 함수');
+        }
+        print();
+
+        function add2(x,y){
+            return x + y; // 리턴에 대한 결과값을 add((3,4))에 넣어준거암
+        }
+        console.log(add2(3,4));
+        add2(3,4); // console로 출력을 안해서 결과가 안 나옴
+
+        function print2(){
+            return '매개변수가 없고 return을 활용한 함수';
+        }
+        print2();
+    
+
+        // 함수를 정의하는 방법
+        // 함수의 선언식 : function 키워드 사용
+        function method1(){
+            console.log('함수의 선언식');
+        }
+        // method1();
+    
+
+        // 함수의 표현식 : function + 변수에 저장
+        let method2 = function(){ // 앞에 선언했기떄문에 function 옆에 선언 필요 없음
+            console.log('함수의 표현식');
+        }
+        method2();
+
+        function method3(z,u){
+            return z + u;
+        }
+        console.log(method3('1' +'2'));
+
+
+        function print3(a,b,c){
+            console.log(a,b,c);
+        }
+        print3(1,2,3);
+        print3(1,2);//1,2, undifined
+
+    </script>
+bbdss
+</body>
+</html>
